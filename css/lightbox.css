@@ -1,0 +1,140 @@
+/* Felix Hagspiel's Lightbox, https://github.com/felixhagspiel/jsOnlyLightbox */
+/**
+*   VARS
+**/
+/* IE8 Stuff */
+.jslghtbx-ie8.jslghtbx {
+  background-image: url("../img/trans-bck.png");
+  display: none; }
+  .jslghtbx-ie8.jslghtbx.jslghtbx-active {
+    display: block; }
+  .jslghtbx-ie8.jslghtbx .jslghtbx-contentwrapper > img {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    display: block; }
+  .jslghtbx-ie8.jslghtbx .jslghtbx-contentwrapper.jslghtbx-wrapper-active > img {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+
+/* Main wrapper */
+.jslghtbx {
+  font-family: sans-serif;
+  overflow: auto;
+  visibility: hidden;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent; }
+  .jslghtbx.jslghtbx-active {
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.85); }
+
+/* loading-animation */
+.jslghtbx-loading-animation {
+  margin-top: -60px;
+  margin-left: -60px;
+  width: 120px;
+  height: 120px;
+  top: 50%;
+  left: 50%;
+  display: none;
+  position: absolute;
+  z-index: -1; }
+  .jslghtbx-loading-animation > span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    margin: 5px;
+    background-color: #fff;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out; }
+    .jslghtbx-loading-animation > span.jslghtbx-active {
+      margin-bottom: 60px; }
+
+.jslghtbx.jslghtbx-loading .jslghtbx-loading-animation {
+  display: block; }
+
+.jslghtbx-nooverflow {
+  overflow: hidden !important; }
+
+.jslghtbx-contentwrapper {
+  margin: auto;
+  visibility: hidden; }
+  .jslghtbx-contentwrapper > img {
+    background: #fff;
+    padding: .5em;
+    display: none;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0; }
+
+.jslghtbx-contentwrapper.jslghtbx-wrapper-active {
+  visibility: visible; }
+  .jslghtbx-contentwrapper.jslghtbx-wrapper-active > img {
+    display: block;
+    opacity: 1; }
+
+/* Caption */
+.jslghtbx-caption {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  max-width: 450px;
+  letter-spacing:normal;
+  color: #fff;
+  text-align: center;
+  font-size: .9em; }
+
+.jslghtbx-active .jslghtbx-caption {
+  display: block; }
+
+/* Animation Stuff */
+.jslghtbx-contentwrapper.jslghtbx-animate > img {
+  opacity: 0; }
+
+.jslghtbx-contentwrapper > img.jslghtbx-animate-transition {
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out; }
+
+.jslghtbx-contentwrapper > img.jslghtbx-animating-next {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+
+.jslghtbx-contentwrapper > img.jslghtbx-animating-prev {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+
+.jslghtbx-contentwrapper > img.jslghtbx-animate-init {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+
+.jslghtbx-contentwrapper > img.jslghtbx-animate-transition {
+  cursor: pointer; }
+
+/* Controls */
+.jslghtbx-close {
+  position: fixed;
+  right: 23px;
+  top: 23px;
+  margin-top: -4px;
+  font-size: 2em;
+  color: #FFFFFF;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out; }
+  .jslghtbx-close:hover {
+    text-shadow: 0 0 10px #fff; }
+  @media screen and (max-width: 1060px) {
+    .jslghtbx-close {
+      font-size: 1.5em; } }
