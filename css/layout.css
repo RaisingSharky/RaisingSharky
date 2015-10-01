@@ -185,6 +185,7 @@ body {
     font-family: "Oswald", sans-serif; /* The font for all text unless specified otherwise */
 }
 
+
 /* Posts are separated by sections, the titles of which are formatted here */
 .content-subhead {
     text-transform: uppercase;
@@ -330,6 +331,7 @@ body {
     height: 100%;
     padding: 5px;
     margin-left: 5px;
+    margin-right: 5px;
     margin-top: 5px;
     background: #F2F2FC; /* #E8E7FC;*/
 }
@@ -351,6 +353,40 @@ body {
     color: #000000;
 }
 
+/* COOKIE BANNER */
+.cookiebanner {
+    letter-spacing:normal;
+    word-spacing:normal;
+    background: rgba(0, 0, 0, 0.8) !important;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 110px !important;
+    width: 290px;
+    margin: 5px;
+
+}
+
+.cookiebanner-close {
+    position: relative;
+    margin: auto;
+    float: right;
+    font-size: 2em;
+}
+
+.cookiebanner a,
+.cookiebanner-close span {
+    color: #FFF !important;
+}
+
+.cookiebanner-close span:hover {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.cookiebanner a:hover {
+    text-decoration: underline !important;
+}
+
 /* FOOTER LAYOUT */
 .footer {
     float: right;
@@ -370,7 +406,6 @@ body {
 
 .pure-menu-horizontal {
     width:100%;
-    white-space:nowrap;
     vertical-align:middle;
 }
 
@@ -428,6 +463,14 @@ body {
         width: 35px;
     }
 
+    .post-title {
+        font-size: 1.5em;
+    }
+
+    .post-description {
+        font-size: 90%;
+    }
+
     .post-with-images img {
         height: 175px;
         width: 175px;
@@ -436,6 +479,15 @@ body {
     .old-post div {
     width: 100%;
     margin-top: 10px;
+    margin-right: 5px;
+    }
+
+    .cookiebanner {
+        width: 90%;
+        bottom: 0;
+        margin-bottom: 5px;
+        margin: auto;
+        height: 20% !important;
     }
 
 }
