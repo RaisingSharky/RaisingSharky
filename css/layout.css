@@ -1,0 +1,500 @@
+/* -- DEFAULTS -- */
+
+a {
+    text-decoration: none;
+    color: rgb(71, 132, 150);   
+}
+
+a :hover {
+    *text-decoration: underline !important;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+i {
+        vertical-align: super;
+        font-size: 0.8em !important;
+    }
+
+/* LAYOUT */
+
+#layout {
+    padding: 0;
+    width: 100%;
+}
+
+/* The header contains the blog title/subtitle and links */
+.header {
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    height: 30%;
+    width: 100%;
+}
+
+/* The sidebar holds the header & displays the background image */
+.sidebar {
+    background: #583FDC; /* Backup, as old browsers don't display background images */
+    letter-spacing:normal;
+    word-spacing:normal;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 25%;
+}
+
+/* Title & subtitle appearance */
+.brand-title,
+.brand-tagline {
+    margin: 0;
+}
+.brand-title {
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.3);
+}
+.brand-tagline {
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation buttons' appearance */
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-item {
+    display: inline-block;
+}
+
+/* Standard appearance */
+.nav-item a {
+    background: rgba(0, 0, 0, 0.3); 
+    border: 2px solid rgba(0, 0, 10, 0.3);
+    color: #FFFFFF; /* Text colour */
+    margin-top: 1em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 85%;
+    float: left;
+    vertical-align:middle;
+    text-align:center;
+    cursor:pointer;
+    padding:.5em 1em;
+    text-decoration:none;border-radius:2px;
+}
+
+/* Appearance of button when mouse hovers over it */
+.nav-item a:hover,
+.nav-item a:focus {
+    background: rgba(0, 0, 10, 0.6);
+    text-decoration: none;
+}
+
+/* Appearance of current page's button */
+.nav-current a {
+    background: rgba(0, 0, 10, 0.6);
+    text-decoration: none;
+    cursor: default;
+}
+
+
+/* SOCIAL MEDIA BUTTON */
+/* Wrapper */
+.icon-button {
+    float: right;
+    font-size: 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 3.6rem;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 2.0rem;
+    height: 3.6rem;
+    line-height: 3.6rem;
+    margin: 0 5px;
+    position: relative;
+    text-align: center;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    width: 3.6rem;
+}
+
+/* Circle */
+.icon-button span {
+    border-radius: 0;
+    display: block;
+    height: 0;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transition: all 0.3s;
+       -moz-transition: all 0.3s;
+         -o-transition: all 0.3s;
+            transition: all 0.3s;
+    width: 0;
+}
+.icon-button:hover span {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 3.6rem;
+    margin: -1.8rem;
+}
+.twitter span {
+    background-color: #4099ff;
+}
+.facebook span {
+    background-color: #3B5998;
+}
+
+/* Icons */
+.icon-button i {
+    text-decoration: none;
+    letter-spacing: 10px;
+    padding-left: 10px;
+    text-align: center;
+    background: none;
+    height: 3.6rem;
+    left: 0;
+    line-height: 3.6rem;
+    position: relative;
+    top: 0;
+    -webkit-transition: all 0.3s;
+       -moz-transition: all 0.3s;
+         -o-transition: all 0.3s;
+            transition: all 0.3s;
+    width: 3.6rem;
+    z-index: 1;
+}
+.icon-button .icon-twitter {
+    color: #4099ff;
+}
+.icon-button .icon-facebook {
+    color: #3B5998;
+}
+
+.icon-button:hover .icon-twitter,
+.icon-button:hover .icon-facebook {
+    color: white;
+}
+
+/* MAIN BLOG FORMATTING */
+body {
+    letter-spacing:-.31em;;
+    *word-spacing:-.43em;
+    font-family: "Oswald", sans-serif; /* The font for all text unless specified otherwise */
+}
+
+
+/* Posts are separated by sections, the titles of which are formatted here */
+.content-subhead {
+    text-transform: uppercase;
+    color: #aaa;
+    border-bottom: 1px solid #eee;
+    padding: 0.4em 0;
+    font-size: 80%;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+/* Main content (everything other than the sidebar) settings */
+.content {
+    padding: 2em 1em 0;
+    margin-left: 25%;
+    letter-spacing:normal;
+    word-spacing:normal;
+}
+
+/* Post-specific formatting */
+.post {
+    padding-bottom: 2em;
+}
+.post-title {
+    font-size: 2em;
+    color: #222;
+    margin-bottom: 0.2em;
+}
+
+/* The main body of each post */
+.post-description {
+    color: #444;
+    line-height: 1.8em;
+}
+
+/* The text beside the post categories, usually used for the date */
+.post-meta {
+    color: #999;
+    font-size: 90%;
+    margin: 0;
+}
+
+/* Post categories */
+/* Category names are set in the HTML, but colours are below */
+/* Use hex-codes like '#5ABA59' or RGB in the format 'RGB(255,180,180)' for colours */
+.post-category {
+    margin: 0 0.1em;
+    padding: 0.3em 1em;
+    color: #fff;
+    background: #999; /* Uncategorised default to Grey */
+    font-size: 80%;
+    text-decoration: none;
+    cursor: default;
+}
+    .post-category-bkg,
+    .post-category-bkg:after {
+        background: #5aba59;
+        content: 'Background';
+    }
+    .post-category-ant,
+    .post-category-ant:after {
+        background: #4d85d1;
+        content: 'Antenatal';
+    }
+    .post-category-food,
+    .post-category-food:after {
+        background: #8156a7;
+        content: 'Food';
+    }
+    .post-category-sleep,
+    .post-category-sleep:after {
+        background: #df2d4f;
+        content: 'Sleep';
+    }
+    .post-category-fun,
+    .post-category-fun:after {
+        background: #E0BB0D;
+        content: 'Fun';
+    }
+
+
+/* Specialised layout for posts that include images */
+/* Positions images alongside text (defaults to above, otherwise) */
+.post-with-images {
+    padding-top: 20px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+/* Set thumbnail image size (lightbox allows viewing larger sizes) */
+.post-with-images img {
+    position: relative;
+    height: 250px; /* Change these size ratios if images aren't square */
+    width: 250px;
+    margin-right: 15px;
+    float: left;
+    cursor: pointer;
+}
+
+/* Image 'pops out' a bit when mouse hovers over it, indicating it can be clicked */
+.post-with-images img:hover{
+    box-shadow: 0px 0px 3px 0px #000;
+}
+
+/* Position the lightbox on top of all other elements of the site */
+#imagelightbox
+{
+    position: fixed;
+    z-index: 9999;
+}
+
+/* Show & hide functionality */
+.more {
+    display: none;
+}
+
+.more-link {
+    color: #BBC6C9;
+    text-decoration: none;
+}
+
+.more-link a:hover {
+    text-decoration: underline;
+}
+
+/* Back to top link */
+.top-link {
+    float: right;
+    margin-left: 1em;
+    color: #BBC6C9;
+}
+
+/* OLDER POSTS LINKS */
+.old-post {
+    height: 200px;
+    vertical-align: middle;
+}
+
+.old-post div {
+    float: left;
+    width: 45%;
+    height: 100%;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    background: #F2F2FC; /* #E8E7FC;*/
+}
+
+.old-post div:hover {
+    box-shadow: 0px 0px 3px 0px #000;
+}
+
+.old-post h2 {
+    text-align: center;
+    font-size: 1em;
+    color: #222;
+    margin-bottom: 0.2em;
+}
+
+.old-post a,
+.old-post a:hover {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* COOKIE BANNER */
+.cookiebanner {
+    letter-spacing:normal;
+    word-spacing:normal;
+    background: rgba(0, 0, 0, 0.8) !important;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 110px !important;
+    width: 290px;
+    margin: 5px;
+
+}
+
+.cookiebanner-close {
+    position: relative;
+    margin: auto;
+    float: right;
+    font-size: 2em;
+}
+
+.cookiebanner a,
+.cookiebanner-close span {
+    color: #FFF !important;
+}
+
+.cookiebanner-close span:hover {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.cookiebanner a:hover {
+    text-decoration: underline !important;
+}
+
+/* FOOTER LAYOUT */
+.footer {
+    float: right;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+}
+.footer a {
+    color: #ccc;
+    font-size: 80%;
+}
+.footer .pure-menu a:hover,
+.footer .pure-menu a:focus {
+    background: none;
+}
+
+.pure-menu-horizontal {
+    width:100%;
+    vertical-align:middle;
+}
+
+.pure-menu-item {
+    position:relative;
+    display: inline-block;
+    *display:inline;
+    margin-left: 10px;
+}
+
+.pure-menu-link {
+    display:block;
+    text-decoration:none;
+    white-space:nowrap;
+}
+
+/* MOBILE LAYOUT ADJUSTMENTS */
+@media only screen and (max-width : 640px) {
+    .header {
+        text-align: center;
+        top: 0;
+        width: 100%;
+    }
+
+    .sidebar {
+        position: absolute; /* change to postion: fixed; if you don't want the nav scrolling off the top of the page */
+        top: 0;
+        height: 100px;
+        width: 100%;
+        z-index: 9;
+    }
+
+    .content {
+        margin-top: 100px;
+        margin-left: 1%;
+        margin-right: 1%;
+        width: 95%;
+    }
+
+    .brand-title {
+        font-size: 150%;
+
+    }
+
+    .brand-tagline {
+        font-size: 50%;
+    }
+
+    .nav-item {
+        font-size: 75%;
+    }
+
+    .share-icon {
+        height: 35px;
+        width: 35px;
+    }
+
+    .post-title {
+        font-size: 1.5em;
+    }
+
+    .post-description {
+        font-size: 90%;
+    }
+
+    .post-with-images img {
+        height: 175px;
+        width: 175px;
+    }
+    
+    .old-post div {
+    width: 95%;
+    margin-top: 10px;
+    margin-right: 5px;
+    }
+
+    .cookiebanner {
+        width: 90%;
+        bottom: 0;
+        margin-bottom: 5px;
+        margin: auto;
+        height: 20% !important;
+    }
+
+}
