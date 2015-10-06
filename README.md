@@ -13,6 +13,8 @@ I've learned a lot by looking at other people's code, so below is a list of all 
     * My home-made image-based ones were ugly. Until I learn to make ones as good as these, they'll remain part of the site.
   * Cookie consent https://github.com/dobarkod/cookie-banner/
     * Again, quite heavily customised, but I'd never have got something like this working without help.
+  * Icons from Font Awesome https://fortawesome.github.io/Font-Awesome/
+    * Initially I used small images to indicate a link that opened a new tab etc. but using an icon font saves having to upload hundreds of tiny images.
 
 ---
 Since I wouldn't have even got this far without other people's open source code, please feel free to copy, alter and re-use any of mine. Just remember to honour the licence requests etc. of the third party bits I've used.
