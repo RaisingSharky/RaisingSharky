@@ -1,14 +1,22 @@
 /* -- DEFAULTS -- */
 
 a {
-    text-decoration: underline;
+    text-decoration: none;
     color: rgb(71, 132, 150);   
+}
+
+a :hover {
+    *text-decoration: underline !important;
 }
 
 ul {
     list-style-type: circle;
 }
 
+i {
+        vertical-align: super;
+        font-size: 0.8em !important;
+    }
 
 /* LAYOUT */
 
